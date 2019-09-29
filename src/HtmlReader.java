@@ -23,5 +23,4 @@ public class HtmlReader {
 	     String htmlFileString = buffer.toString();
 	     return HtmlTag.tokenize(htmlFileString);
 	}
-
 }
