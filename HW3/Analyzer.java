@@ -42,24 +42,30 @@ public class Analyzer {
 	Set<Word> words = new HashSet<>();
 	List<Word> wordsList = new ArrayList<>();	//use list to manipulate information
 	
-	if (sentences.isEmpty()) {
+	if (sentences == null || sentences.isEmpty()) {
 	    return words;	//if the list is empty, method returns an empty set.
 	}
 	
 	for(Sentence sentence : sentences) {
 //	    System.out.println("Sentence examined " + sentence.getText());
-	    String[] tokens = sentence.getText().split(" ");
+	    if (sentence != null) {
 
-	    for (String token : tokens) {	//lower casing and special character filter needs to be implemented
-		Word wordTemp = new Word(token);
-		int index = wordsList.indexOf(wordTemp); 
-		if (index == -1) {
-		    wordTemp.increaseTotal(sentence.getScore());
-		    wordsList.add(wordTemp);
-//		    System.out.println(token + " added for the score of " + sentence.getScore());
-		} else {
-//		    System.out.println("This word exists " + token + ". Score increased by " + sentence.getScore());
-		    wordsList.get(index).increaseTotal(sentence.getScore());
+
+		String[] tokens = sentence.getText().toLowerCase().split(" ");
+
+		for (String token : tokens) {
+		    if(token.matches("[a-zA-Z0-9]+")) {
+			Word wordTemp = new Word(token);
+			int index = wordsList.indexOf(wordTemp);	//if the word doesn't exist it'll show as -1 
+			if (index == -1) {
+			    wordTemp.increaseTotal(sentence.getScore());
+			    wordsList.add(wordTemp);
+//			    System.out.println(token + " added for the score of " + sentence.getScore());
+			} else {
+//			    System.out.println("This word exists " + token + ". Score increased by " + sentence.getScore());
+			    wordsList.get(index).increaseTotal(sentence.getScore());
+			}
+		    }
 		}
 	    }
 	}
@@ -75,14 +81,17 @@ public class Analyzer {
     public static Map<String, Double> calculateScores(Set<Word> words) {
 	Map<String, Double> dictionary = new HashMap<>();
 	
-	if (words.isEmpty()) {
+	if (words == null || words.isEmpty()) {
 	    return dictionary;
 	}
+	
 
 	for(Word word : words) {
-	    String key = word.getText();
-	    double value = word.calculateScore();
-	    dictionary.put(key, value);
+	    if(word != null) {
+		String key = word.getText();
+		double value = word.calculateScore();
+		dictionary.put(key, value);
+	    }
 	}
 
 	return dictionary;
@@ -93,19 +102,26 @@ public class Analyzer {
      * Implement this method in Part 4
      */
     public static double calculateSentenceScore(Map<String, Double> wordScores, String sentence) {
-	if(wordScores == null) {
+	if(wordScores == null || wordScores.isEmpty()) {
 	    return 0;
 	}
 	
-	String[] tokens = sentence.split(" ");
+	if(sentence == null || sentence.isEmpty()) {
+	    return 0;
+	}
+	
+	String[] tokens = sentence.toLowerCase().split(" ");
 	double sentenceScore = 0;
 	int wordCount = 0;
 	
 	for (String token : tokens) {
-	    if(wordScores.containsKey(token)) {
-		sentenceScore += wordScores.get(token);
-		wordCount++;
+		if(wordScores.containsKey(token)) {
+		    sentenceScore += wordScores.get(token);
+		    wordCount++;
+		}
 	    }
+	if(wordCount == 0) {
+	    return 0;
 	}
 
 	return sentenceScore/wordCount;
@@ -117,7 +133,7 @@ public class Analyzer {
      * You may modify it as needed.
      */
     public static void main(String[] args) {
-	String filename = "C:\\Users\\Bennett\\eclipse-workspace\\SD2x\\src\\reviews.txt";
+	String filename = "C:\\Users\\Bennett\\eclipse-workspace\\SD2x\\src\\reviews1.txt";
 
 	List<Sentence> sentences = Analyzer.readFile(filename);
 	Set<Word> dictionary = Analyzer.allWords(sentences);
