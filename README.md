@@ -24,7 +24,7 @@ Implement a program using the three-tier architecture that allows a user to sear
 * [Homework 9 - Refactoring](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@25aa1d46da2e41a5a56573e5f180983c)  
 Refactor a piece of code in order to reduce its size and make it more generalizable.
 * [Homework 10 - Reliability](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@9372fb8191e94f5b8686f264871755cb)  
-Modify code that relates to a simple social networking concept: suggesting friends to a student based on who is taking the same classes.
+Modify code that relates to a simple social networking concept: suggesting friends to a student based on who is taking the same classes. Apply defensive programming techniques to improve the reliability of code.
 * [Homework 11 - Efficiency](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@9a5d4f3869d24cd1b9e7a299cb45f6da)  
 Improve the execution time of a Java program that attempts to detect plagiarism in a corpus of documents.  
 
