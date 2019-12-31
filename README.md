@@ -21,11 +21,11 @@ Implement a design that is specified using a UML class diagram.
 
 * [Homework 8 - Software Design](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2017/courseware/bd1ca9ec42034882bee3dbf3bb80c912/dfe067073833470cb93dff6b3efad0a0/?activate_block_id=block-v1%3APennX%2BSD2x%2B2T2017%2Btype%40sequential%2Bblock%40dfe067073833470cb93dff6b3efad0a0)  
 Implement a program using the three-tier architecture that allows a user to search through a collection of books and find books written by a specific author or the number of books written in a specified year.
-* [Homework 9 - Refactoring](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2017/courseware/2762c877e0824a62b88cc161cffe401b/1a5677a66e2d44b098c55a4b1723262c/?activate_block_id=block-v1%3APennX%2BSD2x%2B2T2017%2Btype%40sequential%2Bblock%401a5677a66e2d44b098c55a4b1723262c)  
+* [Homework 9 - Refactoring](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@25aa1d46da2e41a5a56573e5f180983c)  
 Refactor a piece of code in order to reduce its size and make it more generalizable.
-* [Homework 10 - Reliability](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2017/courseware/2762c877e0824a62b88cc161cffe401b/36272b673f7344789c48933017e18d71/?activate_block_id=block-v1%3APennX%2BSD2x%2B2T2017%2Btype%40sequential%2Bblock%4036272b673f7344789c48933017e18d71)  
+* [Homework 10 - Reliability](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@9372fb8191e94f5b8686f264871755cb)  
 Modify code that relates to a simple social networking concept: suggesting friends to a student based on who is taking the same classes.
-* [Homework 11 - Efficiency](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2017/courseware/2762c877e0824a62b88cc161cffe401b/2f63ea6bd51e4f43b079cf6c6a97c8e6/?activate_block_id=block-v1%3APennX%2BSD2x%2B2T2017%2Btype%40sequential%2Bblock%402f63ea6bd51e4f43b079cf6c6a97c8e6)  
+* [Homework 11 - Efficiency](https://courses.edx.org/courses/course-v1:PennX+SD2x+2T2019/jump_to/block-v1:PennX+SD2x+2T2019+type@vertical+block@9a5d4f3869d24cd1b9e7a299cb45f6da)  
 Improve the execution time of a Java program that attempts to detect plagiarism in a corpus of documents.  
 
 ![Runtime](/HW11/runtime.png?raw=true "1% baseline time")  
