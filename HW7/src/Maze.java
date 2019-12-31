@@ -1,6 +1,6 @@
 
 public class Maze {
-    protected Room[] rooms;
+    public Room[] rooms;
     
     public void addRoom(Room rm) {
 	

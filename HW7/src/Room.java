@@ -1,8 +1,8 @@
 
 public class Room extends MapSite {
-    protected int roomNumber;
-    protected Wall[] sides;
-    protected MapSite[] sites;
+    public int roomNumber;
+    public Wall[] sides;
+    public MapSite[] mapsites;
     
     public Wall getSide(int n) {
 	return null;
