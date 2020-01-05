@@ -1,3 +1,0 @@
-title1	author1	1
-title2	author2	2
-title 3	author 3	3
